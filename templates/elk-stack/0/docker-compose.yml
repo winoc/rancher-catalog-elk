@@ -4,7 +4,6 @@ cerebro:
     io.rancher.container.hostname_override: container_name
   links:
     - 'elasticsearch:elasticsearch'
-  net: 'container:nginx-proxy'
   stdin_open: true
   tty: true
 
@@ -45,6 +44,8 @@ kibana:
     io.rancher.container.hostname_override: container_name
   links:
     - 'elasticsearch:elasticsearch'
+  ports:
+    - '5601:5601/tcp'
   stdin_open: true
   tty: true
 
