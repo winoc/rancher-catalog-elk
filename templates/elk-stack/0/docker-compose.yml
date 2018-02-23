@@ -45,7 +45,6 @@ kibana:
     io.rancher.container.hostname_override: container_name
   links:
     - 'elasticsearch:elasticsearch'
-  net: 'container:nginx-proxy'
   stdin_open: true
   tty: true
 
